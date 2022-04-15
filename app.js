@@ -9,7 +9,7 @@ const startMonitoring = async () => {
   // const revisionInfo = await browserFetcher.download('970485');
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: '/opt/app/node_modules/puppeteer/.local-chromium/win64-970485/chrome-win/chrome',
+    executablePath: process.env.CHROMIUM_PATH,
     args: [
       '--no-sandbox',
       '--disable-gpu',
