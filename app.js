@@ -7,13 +7,15 @@ function randomInteger(min, max) {
 const startMonitoring = async () => {
   // const browserFetcher = puppeteer.createBrowserFetcher();
   // const revisionInfo = await browserFetcher.download('970485');
-  const browser = await puppeteer.launch({
+  const browserFetcher = puppeteer.createBrowserFetcher();
+  const revisionInfo = await browserFetcher.download('970485');
+  const browser =  await puppeteer.launch({
     headless: true,
-    executablePath: process.env.CHROMIUM_PATH,
-    args: [
-      '--no-sandbox',
-      '--disable-gpu',
-    ]
+      executablePath: revisionInfo.executablePath,
+      args: [
+        '--no-sandbox',
+        '--disable-gpu',
+      ] 
   });
 
   const page = await browser.newPage();
