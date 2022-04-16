@@ -50,7 +50,7 @@ const PORT = process.env.PORT || 5000
 const host = process.env.HOST || '0.0.0.0';
 app.listen(PORT, host, () => {
   startMonitoring()
-  console.log('server is run1');
+  console.log('server is run12');
 
 })
 
