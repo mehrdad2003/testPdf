@@ -1,25 +1,16 @@
 const puppeteer = require('puppeteer');
 const express = require('express');
+require('dotenv').config()
 const app = express()
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 const startMonitoring = async () => {
-  const PCR = require("puppeteer-chromium-resolver");
-  const option = {
-      revision: "",
-      detectionPath: "",
-      folderName: ".chromium-browser-snapshots",
-      defaultHosts: ["https://storage.googleapis.com", "https://npm.taobao.org/mirrors"],
-      hosts: [],
-      cacheRevisions: 2,
-      retry: 3,
-      silent: false
-  };
-  const stats = await PCR(option); 
+  
+ 
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: stats.executablePath,
+   
     args: [
       '--no-sandbox',
       '--disable-gpu',
