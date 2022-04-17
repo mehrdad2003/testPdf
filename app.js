@@ -16,7 +16,7 @@ const startMonitoring = async () => {
       retry: 3,
       silent: false
   };
-  const stats = await PCR(option);
+  const stats = await PCR(option); 
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: stats.executablePath,
