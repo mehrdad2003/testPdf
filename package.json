@@ -1,4 +1,13 @@
 {
+  "name": "testPdf",
+  "version": "1.0.0",
+  "description": "a simple bot",
+  "main": "app.js",
+  "scripts": {
+   
+    "start": "node app.js"
+   
+  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
